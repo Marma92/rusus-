@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impostor Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="messageContainer"></div>
+    <form id="nameForm">
+      <label for="playerName">Enter your name:</label>
+      <input type="text" id="playerName" required />
+      <button type="submit">Join Game</button>
+    </form>
+    <div id="gameControls" style="display: none">
+      <button id="newGameBtn">New Game</button>
+      <button id="gameOverBtn" style="display: none">Game Over</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
