@@ -64,8 +64,13 @@ button {
   src: url('fonts/impostograph/Impostograph-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Impostograph-Regular-o';
+  src: url('fonts/impostograph/Impostograph-Regular.otf') format('opentype');
+}
+
 #headtitle {
-  font-family: 'Impostograph-Regular', sans-serif;
+  font-family: 'Impostograph-Regular', 'Impostograph-Regular-o', sans-serif;
   font-size: xx-large;
   margin: 0;
   margin-left: 10%;
