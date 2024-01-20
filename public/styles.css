@@ -4,7 +4,21 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: #333; /* Change this to the desired background color */
+  color: #fff; /* Change this to the desired text color */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #container {
@@ -22,6 +36,7 @@ body {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;
+  margin-top: 60px;
 }
 
 form {
@@ -42,4 +57,22 @@ button {
 
 .messageDiv {
   border-bottom: 1px solid rgba(189, 173, 133, 0.619);
+}
+
+@font-face {
+  font-family: 'Impostograph-Regular';
+  src: url('fonts/impostograph/Impostograph-Regular.ttf') format('truetype');
+}
+
+#headtitle {
+  font-family: 'Impostograph-Regular', sans-serif;
+  font-size: xx-large;
+  margin: 0;
+  margin-left: 10%;
+}
+
+#amogus {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto;
+  margin-right: 10%;
 }
