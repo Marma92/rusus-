@@ -72,6 +72,21 @@ footer p {
   width: 68%;
   height: 80%;
   overflow: auto; /* Add overflow to allow scrolling if necessary */
+  overflow-y: scroll; /* Enable vertical scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+#messageContainer::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+#messageContainer::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color of the thumb */
+}
+
+#messageContainer::-webkit-scrollbar-track {
+  background-color: transparent; /* Color of the track */
 }
 
 #controlsWrapper {
