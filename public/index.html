@@ -5,15 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impostor Game</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="bundle.css" />
   </head>
   <body>
+    <sky>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+      <star></star>
+    </sky>
+
+    <boi>
+      <rightleg></rightleg>
+      <leftleg></leftleg>
+      <backpack></backpack>
+      <belly></belly>
+      <eye></eye>
+      <leftleg></leftleg>
+    </boi>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <filter id="inset" x="-50%" y="-50%" width="200%" height="200%">
+        <feFlood flood-color="black" result="outside-color" />
+        <feMorphology in="SourceAlpha" operator="dilate" radius="3.5" />
+        <feComposite in="outside-color" operator="in" result="outside-stroke" />
+        <feFlood flood-color="#0c9fc4" result="inside-color" />
+        <feComposite in2="SourceAlpha" operator="in" result="inside-stroke" />
+        <feMerge>
+          <feMergeNode in="outside-stroke" />
+          <feMergeNode in="inside-stroke" />
+        </feMerge>
+      </filter>
+    </svg>
+
     <header>
       <h1 id="headtitle">R U SUS ?</h1>
       <img src="imgs/1f8.png" alt="AMOGUS" id="amogus" />
     </header>
+
     <div id="messageWrapper">
       <div id="messageContainer"></div>
     </div>
+
     <div id="controlsWrapper">
       <form id="nameForm">
         <label for="playerName">Enter your name:</label>
@@ -27,11 +126,13 @@
         <button id="gameOverBtn" style="display: none">Game Over</button>
       </div>
     </div>
+
     <footer>
       <p>Made with <span style="color: crimson">❤</span> by AE</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
     <script src="client.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
