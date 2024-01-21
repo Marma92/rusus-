@@ -8,7 +8,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
+  background: url('imgs/empty_space.png') no-repeat center center fixed;
+  background-size: cover;
 }
+
 header {
   background: linear-gradient(to bottom, rgb(83, 83, 83), rgba(83, 83, 83, 0));
   color: #fff;
@@ -38,6 +41,7 @@ footer {
   align-items: center;
   text-align: center;
   z-index: 1; /* Ensure footer is above other elements */
+  color: #fff;
 }
 
 footer p {
@@ -66,15 +70,18 @@ footer p {
 
 #messageContainer {
   position: relative;
-  padding-left: 13%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 68%;
-  height: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 12%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: 71%;
+  height: 83.5%;
   overflow: auto; /* Add overflow to allow scrolling if necessary */
   overflow-y: scroll; /* Enable vertical scrollbar */
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: transparent transparent; /* Firefox */
+  background-color: aquamarine;
 }
 
 #messageContainer::-webkit-scrollbar {
@@ -90,6 +97,7 @@ footer p {
 }
 
 #controlsWrapper {
+  color: #fff;
   position: fixed;
   top: 50%; /* Adjust the top margin as needed */
   right: 3%; /* Adjust the right margin as needed */
@@ -107,6 +115,13 @@ button {
   padding: 10px;
   margin-right: 5px;
   cursor: pointer;
+  border-radius: 40%;
+  margin-left: 25%;
+  border: solid greenyellow 5px;
+}
+
+button:hover {
+  border: solid red 10px;
 }
 
 .messageData {
