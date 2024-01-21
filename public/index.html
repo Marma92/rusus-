@@ -119,7 +119,7 @@
         <br />
         <input type="text" id="playerName" required />
         <br />
-        <button type="submit">Join Game</button>
+        <button id="joinGameBtn" type="submit">Join Game</button>
       </form>
       <div id="gameControls" style="display: none">
         <button id="newGameBtn">New Game</button>
@@ -131,6 +131,9 @@
       <p>Made with <span style="color: crimson">❤</span> by AE</p>
     </footer>
 
+    <audio id="game-starts" src="sounds/among-us-game-starts.mp3"></audio>
+    <audio id="game-over" src="sounds/among-us-vote.mp3"></audio>
+    <audio id="new-player" src="sounds/among-us-player-enters.mp3"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
     <script src="client.js"></script>
     <script src="bundle.js"></script>

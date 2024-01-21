@@ -20,6 +20,8 @@ nameForm.addEventListener('submit', event => {
 
 socket.on('newPlayer', (playerName, playersCount, readyPlayersCount) => {
   displayGameState(playerName, 'connected', playersCount, readyPlayersCount);
+  const newPlayer = document.getElementById('new-player');
+  newPlayer.play();
 });
 
 socket.on('playerReady', (playerName, playersCount, readyPlayersCount) => {
@@ -35,6 +37,8 @@ socket.on('gameOn', () => {
   displayMessage("Game's ON !");
   newGameBtn.style.display = 'none';
   gameOverBtn.style.display = 'block';
+  const gameStarts = document.getElementById('game-starts');
+  gameStarts.play();
 });
 
 socket.on('werewolfAlert', message => {
@@ -58,6 +62,8 @@ socket.on('playerGameOver', (playerName, playersCount, playersReady) => {
   displayMessage(
     `${playerName} clicked Game Over, players ready: ${playersReady}/${playersCount}`
   );
+  const gameOver = document.getElementById('game-over');
+  gameOver.play();
 });
 
 socket.on('allPlayersGameOver', werewolf => {
