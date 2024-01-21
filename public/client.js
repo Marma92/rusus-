@@ -83,6 +83,9 @@ function displayMessage(message, color) {
   messageDiv.appendChild(messageElement);
   messageDiv.appendChild(messageData);
   messageContainer.appendChild(messageDiv);
+
+  // Scroll to the bottom
+  scrollToBottom();
 }
 
 function displayGameState(
@@ -94,6 +97,10 @@ function displayGameState(
   displayMessage(
     `${playerName} has ${playerAction}. Players: ${playersCount} Ready: ${readyPlayersCount}`
   );
+}
+
+function scrollToBottom() {
+  messageContainer.scrollTop = messageContainer.scrollHeight;
 }
 
 const getDateTime = () => {
